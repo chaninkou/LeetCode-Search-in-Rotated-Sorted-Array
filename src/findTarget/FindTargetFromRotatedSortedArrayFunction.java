@@ -17,10 +17,13 @@ public class FindTargetFromRotatedSortedArrayFunction {
 			// Getting the mid point in order to see if target is on left
 			int mid = left + (right - left) / 2;
 
+			// Once if middle index is the target, return mid
 			if (nums[mid] == target) {
 				return mid;
 			}
-
+			
+			
+			// This is just a binary search but with extra steps
 			// If mid point is bigger than left side or pivot is on the right
 			if (nums[left] <= nums[mid]) {
 				// Checking if the target is on the left side
