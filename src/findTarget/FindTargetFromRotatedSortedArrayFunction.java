@@ -22,7 +22,8 @@ public class FindTargetFromRotatedSortedArrayFunction {
 				return mid;
 			}
 			
-			
+			// There is a pattern, nums[left] < target < nums[mid]
+			// nums[mid] < target <= nums[right]
 			// This is just a binary search but with extra steps
 			// If mid point is bigger than left side or pivot is on the right
 			if (nums[left] <= nums[mid]) {
@@ -47,6 +48,7 @@ public class FindTargetFromRotatedSortedArrayFunction {
 
 		}
 
+		// -1 mean target not inside
 		return -1;
 	}
 }
