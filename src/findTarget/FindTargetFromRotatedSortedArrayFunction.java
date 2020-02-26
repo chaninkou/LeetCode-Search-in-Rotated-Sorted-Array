@@ -3,6 +3,7 @@ package findTarget;
 public class FindTargetFromRotatedSortedArrayFunction {
 	
 	// This will be log(n) because we don't have to go through the whole array, we are using binary search 2.0 to do it
+	// This will only work if its half sorted
 	public int search(int[] nums, int target) {
 		// First, check if the array is empty or null
 		if (nums.length == 0 || nums == null) {
