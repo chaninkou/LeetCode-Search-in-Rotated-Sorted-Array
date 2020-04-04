@@ -14,8 +14,7 @@ public class FindTargetFromRotatedSortedArrayFunction {
 		int left = 0;
 		int right = nums.length - 1;
 
-		// We want <= because the target might be on the border line of left or
-		// right
+		// Included because we are only return mid to be our answer inside this loop
 		while (left <= right) {
 			// Getting the mid point in order to see if target is on left
 			int mid = left + (right - left) / 2;
