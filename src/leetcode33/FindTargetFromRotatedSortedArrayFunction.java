@@ -1,4 +1,4 @@
-package findTarget;
+package leetcode33;
 
 public class FindTargetFromRotatedSortedArrayFunction {
 	
@@ -16,7 +16,6 @@ public class FindTargetFromRotatedSortedArrayFunction {
 
 		// Included because we are only return mid to be our answer inside this loop
 		while (left <= right) {
-			// Getting the mid point in order to see if target is on left
 			int mid = left + (right - left) / 2;
 
 			// Once if middle index is the target, return mid
@@ -26,8 +25,6 @@ public class FindTargetFromRotatedSortedArrayFunction {
 			
 			// There is a pattern, nums[left] < target < nums[mid]
 			// nums[mid] < target <= nums[right]
-			// This is just a binary search but with extra steps
-			// If mid point is bigger than left side or pivot is on the right
 			if (nums[left] <= nums[mid]) {
 				// Checking if the target is on the left side
 				if (nums[left] <= target && target < nums[mid]) {
